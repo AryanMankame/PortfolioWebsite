@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+.head-txt{
+    margin-right:20px;
+    font-family: 'Menlo', cursive;
+	font-weight: 100;
+    color: #fff;
+    font-size: 16px;
+    text-shadow: 0px 0px 20px #00aad4;
+    /* -webkit-animation: blinkH1 5s  infinite;
+    animation: blinkH1 5s  infinite; */
+}
+@media (max-width:500px){
+    #navbar{
+        display: flex !important; flex-direction: row !important;
+        padding-top: 10px; 
+        padding-right:10vw;
+    }
+    #items {
+        max-width:54vw !important;
+        height:5vh !important;
+        margin-right:5px !important;
+        display: flex !important; 
+        flex-direction: row !important; 
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top:1vh !important;
+        letter-spacing:1px !important;
+        font-size:20px !important;
+        color:grey !important;
+        border:2px solid white !important;
+        border-radius:40px !important;
+        margin-right:5% !important;
+        padding-left:15vw !important;
+    }
+    .head-txt{
+        font-size:10px !important;
+    }
+    #logo{
+        width:5vw !important;
+        margin-right:25%;
+    }
+    #aw-logo{
+        height:40px !important; width:40px !important;
+        margin-top:1.3vh;
+        margin-left:5vw !important;
+    }
+    #social-id{
+        width: 10vw !important;
+        display:flex; flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-right:30% !important;
+    }
+    #social-id > div > img{
+        height:15px !important; width:15px !important;
+        margin-bottom:3px;
+        margin-right:auto !important;
+        
+    }
+    #social-id > div > img:hover{
+        cursor:pointer;
+    }
+}
+@media (min-width: 500px){
+    #items{
+        max-width:20vw !important;
+        height:8vh;
+        display: flex !important; 
+        flex-direction: row !important; 
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top:1vh !important;
+        letter-spacing:1px !important;
+        font-size:20px !important;
+        color:grey !important;
+        border:2px solid white !important;
+        border-radius:40px !important;
+        margin-right:35% !important;
+        padding-left:6vw !important;
+    }
+    #navbar{
+        /* margin-top:2vh; */
+        height:10vh !important; width:100vw !important;
+        display: flex !important; 
+        flex-direction: row !important; 
+        justify-content: center !important;
+        margin-bottom:2vh !important;
+    }
+    #logo{
+        width:5vw !important;
+        margin-right:25%;
+    }
+    #aw-logo{
+        height:80px !important; width:80px !important;
+    }
+    #social-id{
+        width: 10vw !important;
+        display:flex; flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-right:30% !important;
+    }
+    #social-id > div > img{
+        height:20px !important; width:20px !important;
+        /* margin-bottom:5px; */
+        margin-right:auto !important;
+        
+    }
+    #social-id > div > img:hover{
+        cursor:pointer;
+    }
+}
+.head-txt:hover{
+    cursor:pointer;
+    transition:all 1s;
+    transform:scale(1.1);
+    text-decoration:underline;
+}
+.head-txt:after{
+    content: '';
+	position: absolute !important;
+    height:2%; width:10%;
+	color: #f9f9f9;
+    z-index:100;
+    background-color: #00aad4;
+    filter: blur(50px) !important;
+}
+.head-txt:before{
+    content: '';
+    position: absolute !important;
+    width: 10%;
+	height: 2%;
+    /* top:0; left:0; */
+	z-index: 100;
+	opacity: 0.7;
+    background-color: #00aad4;
+    filter: blur(50px) !important;
+    
+}
+span{
+    font-family: 'Menlo', cursive;
+	font-weight: 100;
+	margin: 0px;
+    color: #fff !important;
+    /* font-size: 36px; */
+    text-shadow: 0px 0px 20px #00aad4 !important;
+}

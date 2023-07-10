@@ -13,6 +13,21 @@
   -webkit-text-size-adjust: 100%;
 }
 
+
+::-webkit-scrollbar{
+  width: 1vw;
+}
+
+::-webkit-scrollbar-track{
+  width: 1vw;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #747bff;
+  border-radius: 10px;
+}
+
+
 a {
   font-weight: 500;
   color: #646cff;

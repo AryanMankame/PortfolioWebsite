@@ -1,37 +1,48 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styled from 'styled-components'
 import Typed from 'react-typed'
 import Navbar from './Navbar'
 import Particle from './Particle'
+import ScreenLoader from './ScreenLoader'
+import { useEffect } from 'react'
 function Home() {
+  const [show,setshow] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setshow(true),3000);
+  },[]);
   return (
-    <Page>
-        <Particle />
-        <div id="circle-left"></div>
-        <div id="circle-mid"></div>
-        <Navbar />
-        <div id="main">
-            <div id="p1">
-                <div id="intro">Hi,</div> 
-                <div id = "moving-text">I'm &nbsp;
-                <Typed id = "mov-txt" strings = {["Aryan Mankame","a Full Stack Developer"]} typeSpeed={150} backSpeed={100} loop />
+    <div>
+        {
+            show ? 
+            <Page>
+                <Particle />
+                <div id="circle-left"></div>
+                <div id="circle-mid"></div>
+                <Navbar />
+                <div id="main">
+                    <div id="p1">
+                        <div id="intro">Hi,</div> 
+                        <div id = "moving-text">I'm &nbsp;
+                        <Typed id = "mov-txt" strings = {["Aryan Mankame","a Full Stack Developer"]} typeSpeed={150} backSpeed={100} loop />
+                        </div>
+                        <div id="moreinfo">Full Stack Developer having 1.5+ years <br/>experience of using MERN Stack</div>
+                        <div id="button-div">
+                        <button id="download" onClick={() => {
+                            window.open('AryanMankame.pdf');
+                        }}>Download CV</button>
+                        <button id="hire" onClick = {() => {
+                            window.open('https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSGKZhCjTQTKkHWzBsCFBQDjrQxhmgVglgHWFDtlCqdvpFwTxSkKxWhjWQXkcKMlVJVGhchT');
+                        }}>Hire Me</button>
+                        </div>
+                    </div>
+                    <div id="p2">
+                        <img id = "blob-img" src = "right-blob.svg" alt=""></img>
+                        <img id = "profile-img" src = "p1.png" alt=""></img>
+                    </div>
                 </div>
-                <div id="moreinfo">Full Stack Developer having 1.5+ years <br/>experience of using MERN Stack</div>
-                <div id="button-div">
-                <button id="download" onClick={() => {
-                    window.open('AryanMankame.pdf');
-                }}>Download CV</button>
-                <button id="hire" onClick = {() => {
-                    window.open('https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSGKZhCjTQTKkHWzBsCFBQDjrQxhmgVglgHWFDtlCqdvpFwTxSkKxWhjWQXkcKMlVJVGhchT');
-                }}>Hire Me</button>
-                </div>
-            </div>
-            <div id="p2">
-                <img id = "blob-img" src = "right-blob.svg" alt=""></img>
-                <img id = "profile-img" src = "p1.png" alt=""></img>
-            </div>
-        </div>
-    </Page>
+            </Page> : <ScreenLoader></ScreenLoader>
+        }
+    </div>
   )
 }
 const Page = styled.div`

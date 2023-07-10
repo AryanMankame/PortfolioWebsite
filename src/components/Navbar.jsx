@@ -40,6 +40,5 @@ const Page = styled.div`
     z-index:1000 !important;
     position:relative !important;
     width:100vw !important;
-    
 `;
 export default Navbar

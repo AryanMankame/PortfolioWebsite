@@ -97,25 +97,33 @@ function navigation() {
             </div>
             <div className = "strip" id="str2">
               <div className = "smdot" id="dot"></div>
-              <div id="text">
-                <div>02</div><div>TrackMe</div>
+              <div id="text" onClick = {() => {
+                window.open('https://track-me-frontend.onrender.com/')
+              }}>
+                <div >02</div><div>TrackMe</div>
               </div>
             </div>
             <div className = "strip" id="str3">
               <div className = "smdot" id="dot"></div>
-              <div id="text">
+              <div id="text" onClick = {() => {
+                window.open('https://github.com/AryanMankame/ecell_nitb_hack2k23__TheGameChangers/')
+              }}>
                 <div>03</div><div>E-Kabad</div>
               </div>
             </div>
             <div className = "strip" id="str4">
               <div className = "smdot" id="dot"></div>
-              <div id="text">
+              <div id="text" onClick = {() => {
+                window.open('https://disneyhotstarclone-1f320.web.app/')
+              }}>
                 <div>04</div><div>Disney Hotstar Clone</div>
               </div>
             </div>
             <div className = "strip" id="str5">
               <div className = "smdot" id="dot"></div>
-              <div id="text">
+              <div id="text" onClick = {() => {
+                window.open('https://aryanmankame.netlify.app/')
+              }}>
                 <div>05</div><div>Portfolio Website</div>
               </div>
             </div>
